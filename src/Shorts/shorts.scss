@@ -1,0 +1,133 @@
+.MainBox {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.MainHolder {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ShortContent {
+  margin-top: 10vh;
+  text-align: center;
+  h3 {
+    margin: 3vh;
+    font-size: 4vh;
+    color: goldenrod;
+    margin-bottom: 0;
+  }
+  h5 {
+    background: -webkit-linear-gradient(
+      right,
+      rgb(253, 9, 119),
+      rgb(4, 180, 180)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+    font-size: 5vh;
+  }
+}
+
+.vidvid {
+  text-decoration: none;
+  h1 {
+    margin: 1vh 0;
+    color: #545454;
+  }
+  p {
+    color: rgb(28, 168, 184);
+    font-size: small;
+    font-weight: bold;
+  }
+  margin: 3vh;
+}
+
+.PVideoCard {
+  height: 30vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  width: 18vw;
+  align-items: center;
+  text-align: left;
+  img {
+    height: 10vh;
+    width: 10vw;
+    border-radius: 15px;
+    &:hover {
+      transition-duration: 1s;
+    }
+    transition-duration: 1s;
+  }
+  .CategoryVid {
+    color: rgb(177, 177, 177);
+  }
+}
+
+.Rate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div{
+        display: flex;
+        height: 10vh;
+        align-items: center;
+        justify-content: center;
+        h4{
+            height: 6vh;
+            width: 6vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #d9f4f3;
+            border-radius: 50%;
+            margin: 1vw;
+            
+        }
+    }
+}
+.PlayerBox {
+  .VideoBox {
+    background: none;
+  }
+  background-image: url("../resources/pattern1Blob.png");
+  background-size: contain;
+  background-repeat: repeat;
+  background-size: 55vh;
+}
+
+.RecommendedVideos {
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.CategorySelect {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin: 5vh 0;
+  h4 {
+    color: #777676;
+    font-weight: bold;
+    width: 22%;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 2px solid;
+    border-color: transparent;
+    padding-bottom: 1vh;
+    font-size: larger;
+
+    transition-duration: 1s;
+  }
+}

@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+} from "react-router-dom";
 
 import LandingPage from "./landingPage/landingPage";
 // import LoginPage from './loginPage/loginPage';
@@ -24,6 +30,8 @@ import JS01 from "./CoursePages/JSBhavesh/javascript01";
 import Python01Enroll from "./CoursePages/PythonVaishnavi/python01-course-enroll";
 import Python01 from "./CoursePages/PythonVaishnavi/pydev-python01";
 import ScrollToTop from "./ScrollToTop";
+import ShortsPage from "./Shorts/shorts";
+import PlayerBox from "./Shorts/player";
 
 const App = () => {
   let [signedInUser, setsignedInUser] = useState(defaultUser);
@@ -37,10 +45,10 @@ const App = () => {
 
         <UserContext.Provider value={{ signedInUser, setsignedInUser }}>
           <Switch>
-            <Route exact path='/'>
+            <Route exact path="/">
               <LandingPage />
             </Route>
-            <Route exact path='/login'>
+            <Route exact path="/login">
               <LoginPage />
             </Route>
           </Switch>
@@ -82,56 +90,64 @@ const App = () => {
             </Route>
           </Switch> */}
 
-          {!authenticated && (
+          {/* {!authenticated && (
             <Switch>
-              <Redirect from='/login' to='/login'></Redirect>
-              <Redirect from='/dashboard' to='/login'></Redirect>
-              <Redirect from='/all-courses' to='/login'></Redirect>
+              <Redirect from="/login" to="/login"></Redirect>
+              <Redirect from="/dashboard" to="/login"></Redirect>
+              <Redirect from="/all-courses" to="/login"></Redirect>
 
-              <Redirect to='/'></Redirect>
+              <Redirect to="/"></Redirect>
             </Switch>
-          )}
+          )} */}
 
-          {authenticated && (
+          {/* {authenticated && (
             <Switch>
-              <Redirect from='/login' to='/dashboard'></Redirect>
+              <Redirect from="/login" to="/dashboard"></Redirect>
             </Switch>
-          )}
+          )} */}
 
-          {authenticated && (
+          {true && (
             <Switch>
-              <Route exact path='/dashboard'>
+              <Route exact path="/dashboard">
                 <DashBoard />
               </Route>
-              <Route exact path='/all-courses'>
+              <Route exact path="/all-courses">
                 <AllCourses />
               </Route>
 
-              <Route exact path='/html01-course-enroll'>
+              <Route exact path="/partnerships">
+                <ShortsPage />
+              </Route>
+
+              <Route exact path="/VideoPlayer">
+                <PlayerBox />
+              </Route>
+
+              <Route exact path="/html01-course-enroll">
                 <Html01Enroll />
               </Route>
-              <Route exact path='/webdev-html01'>
+              <Route exact path="/webdev-html01">
                 <Html01 />
               </Route>
 
-              <Route exact path='/java01-course-enroll'>
+              <Route exact path="/java01-course-enroll">
                 <Java01Enroll />
               </Route>
-              <Route exact path='/javadev-java01'>
+              <Route exact path="/javadev-java01">
                 <Java01 />
               </Route>
 
-              <Route exact path='/js01-course-enroll'>
+              <Route exact path="/js01-course-enroll">
                 <JS01Enroll />
               </Route>
-              <Route exact path='/javascript01'>
+              <Route exact path="/javascript01">
                 <JS01 />
               </Route>
 
-              <Route exact path='/python01-course-enroll'>
+              <Route exact path="/python01-course-enroll">
                 <Python01Enroll />
               </Route>
-              <Route exact path='/pydev-python01'>
+              <Route exact path="/pydev-python01">
                 <Python01 />
               </Route>
             </Switch>
@@ -141,5 +157,4 @@ const App = () => {
     </>
   );
 };
-// aik enroll kartana mag id pan send maru  ha bc saglech kru lvdya uthe quiza nyae thgamb tyu-
 export default App;

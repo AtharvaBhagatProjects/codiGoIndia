@@ -178,7 +178,7 @@ const DashBoard = () => {
             </li>
             <li onClick={() => setIndex(1)} style={index === 1 ? clickedStyles : {}}>
               <img src={index === 1 ? cloudIconClicked : cloudIcon}></img>
-              <p>Cloud</p>
+              <p>History</p>
             </li>
             <li onClick={() => setIndex(2)} style={index === 2 ? clickedStyles : {}}>
               <img src={index === 2 ? settingsIconClicked : settingsIcon}></img>
